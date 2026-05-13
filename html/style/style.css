@@ -1,51 +1,75 @@
+html,
 body {
-    background-image: url('images/film_grain.gif');
-    /*background-color:black ;*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* BACKGROUND */
+
+body {
+    background-image: url("images/film_grain.gif");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 9em;
-}
+/* DESKTOP */
 
-img{
+.title {
     width: 70%;
-    height: 60%;
-    margin: 20px;
+    margin-top: 20px;
 }
 
-.button {
+.buttons {
+    display: flex;
     justify-content: center;
-    display: inline-block;
-    border: none;
-    background: none;
-    gap: 10px;
-    margin-left: 80px;
-    width: 40%;
-    height: 40%;
+    align-items: center;
 }
+
+.button-img {
+    width: 35%;
+    margin: 20px;
+    height: auto;
+}
+
+/* IPHONE FIXES ONLY */
 
 @media screen and (max-width: 768px) {
-body{
 
-        background-repeat: repeat;
-        background-size: auto;
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
-
-    h1 {
-        font-size: 3rem;
+        min-height: 100dvh;
     }
 
-    img {
+    .container {
         width: 100%;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .button {
-        width: 90%;
-        margin-left: 0;
+    .title {
+        width: 95vw;
+        margin: 0 0 20px 0;
+    }
+
+    .buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-img {
+        width: 85vw;
+        margin: 10px 0;
     }
 }
